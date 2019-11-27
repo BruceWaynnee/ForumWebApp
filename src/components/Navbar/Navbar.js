@@ -1,16 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Searchbar from '../Searchbar/Searchbar';
 
-class Navbar extends React.Component{
-    render(){
-        return(
-            <div className='d-block'>
-                <h2 className='float-left m-3'>Forum</h2>
-                <a className='float-right m-3 text-decoration-none text-black-50' href='login.com'>Log in </a>
-                <a className='float-right m-3 text-decoration-none text-black-50' href='signup.com'>Sign up</a>
+class Navbar extends React.Component {
+    render() {
+        return (
+            <div className="navbar navbar-expand-lg navbar-light bg-light">
+                <h2 className="navbar-brand" href="#">Navbar</h2>
+                <Searchbar />
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active float-right">
+                        <a className="nav-link" href="#">Log in <span className="sr-only">(current)</span></a>
+                    </li>
+                    <li className="nav-item float-right">
+                        <a className="nav-link" href="#">Sign up</a>
+                    </li>
+                </ul>
             </div>
-        );
-    }
-}
-
+                );
+            }
+        }
+        
 export default Navbar;
