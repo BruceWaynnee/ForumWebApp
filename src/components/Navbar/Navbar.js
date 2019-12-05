@@ -35,6 +35,14 @@ class Navbar extends React.Component {
                     </li>
                 </ul>
             )
+        }else if (this.props.option === 3) { //-options = 3 => Show current login user name.
+            return(
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item float-right">
+                        <a className="nav-link" href="#">Current Login UserName{/*Replace with username*/}</a>
+                    </li>
+                </ul>
+            )
         } else { //-options = 0 => Both Log In and Sign Up button are available for click.
             return (
                 <ul className="navbar-nav ml-auto">
